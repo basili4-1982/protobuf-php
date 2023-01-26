@@ -2,10 +2,11 @@
 
 set -ex
 
-VERSION=$(git describe --abbrev=0)
-
-
 git clone https://github.com/protocolbuffers/protobuf.git
+
+cd protobuf
+VERSION=$(git describe --abbrev=0)
+cd ..
 
 # Clean old files
 rm -rf ./src/*
